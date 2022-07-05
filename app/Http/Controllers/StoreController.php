@@ -18,9 +18,6 @@ class StoreController extends BaseController {
 
     public function Book($book){
 
-        $session_id = session('user_id');
-        $request=request();
-
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_URL,
         "https://www.googleapis.com/books/v1/volumes?q=".$book
