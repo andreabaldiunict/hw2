@@ -13,6 +13,7 @@ use App\Http\Controllers;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/', function () {
     return view('register');
 });
@@ -39,6 +40,8 @@ Route::get('/register/email/{email}', "App\Http\Controllers\RegisterController@c
 Route::get('/login', "App\Http\Controllers\LoginController@login")->name("login");
 Route::get('/logout', "App\Http\Controllers\LoginController@logout")->name("logout");
 Route::post('/login', "App\Http\Controllers\LoginController@checkLogin");
+
+Route::get('/quotable', "App\Http\Controllers\HomeController@quotable");
 
 Route::get('/store', "App\Http\Controllers\StoreController@index");
 Route::get('/store/id/{id}', "App\Http\Controllers\StoreController@ispref");

@@ -98,9 +98,6 @@
             </div>
         </section>
 
-        <section id="box-book">
-        </section>
-
     </article>
 
     <!--FOOTER-->

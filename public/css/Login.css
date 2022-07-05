@@ -101,6 +101,14 @@ input:focus::placeholder {
 	color: rgb(214, 0, 0);
 }
 
+
+span {
+
+	display: block;
+	color:red;
+	font-size:18px;
+}
+
 #containerShortcut{
 	margin: 0;
 }
@@ -116,9 +124,16 @@ input:focus::placeholder {
 .hidden{
 	display: none;
 	justify-content: center;
-	text-align: center;  
+	text-align: center; 
+	color:red;
+	font-size:18px; 
 }
-  
+
+.error{
+	font-size: 18px;
+	color:red;
+}
+
 .noScroll{
 	overflow: hidden;
 }

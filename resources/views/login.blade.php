@@ -23,14 +23,14 @@
             <div id="formLogin">
                 <form name="loginForm" method="POST" action="/login">
                 @csrf
+                    <span class='hidden'>Inserisci tutti i campi</span>
+
                     <div class="inputBox">
-                        <input type='text' placeholder = 'Username' name='username' class="textBox" autocomplete="on">
-                        <p id='segnalazione' class='erroreU hidden'>"Inserisci l'username"</p>
+                        <input type='text' placeholder = 'Username' name='username' class="textBox" autocomplete="on">   
                     </div>
 
                     <div class="inputBox">
-                        <input type='password' placeholder = 'Passowrd' name='password' class="textBox" autocomplete="on">
-                        <p id='segnpass' class='erroreP hidden'>Inserisci la password</p>
+                        <input type='password' placeholder = 'Password' name='password' class="textBox" autocomplete="on">
                     </div>
 
                     <div class="submit">
@@ -41,6 +41,9 @@
                         <p>Non sei Registrato? <a href='{{url("signup")}}'>Registrati </a>
                         </p>
                     </div>
+                    @if(isset($error))
+                         <p class='error'>{{ $error }}</p>
+                    @endif
                 </form>
             </div>
         </div>

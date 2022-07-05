@@ -17,7 +17,6 @@
 </head>
 
 <body>
-    <!--MENÙ READBOOK-->
     @csrf
         <!--MENÙ READBOOK-->
         <header>

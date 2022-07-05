@@ -121,6 +121,12 @@ form span {
 	font-size:12px;
 }
 
+.error {
+	display: block;
+	color:red;
+	font-size:12px;
+}
+
 #containerShortcut{
 	margin: 0;
 }
