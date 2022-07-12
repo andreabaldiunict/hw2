@@ -23,7 +23,6 @@
             <div id="formLogin">
                 <form name="loginForm" method="POST" action="/login">
                 @csrf
-                    <span class='hidden'>Inserisci tutti i campi</span>
 
                     <div class="inputBox">
                         <input type='text' placeholder = 'Username' name='username' class="textBox" autocomplete="on">   
@@ -41,6 +40,7 @@
                         <p>Non sei Registrato? <a href='{{url("signup")}}'>Registrati </a>
                         </p>
                     </div>
+                    <span class='hidden'>Inserisci tutti i campi</span>
                     @if(isset($error))
                          <p class='error'>{{ $error }}</p>
                     @endif

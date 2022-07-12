@@ -19,7 +19,6 @@ function controllaUsername(){
         formStatus.username = false;
         controllaForm();
     } else {
-        // Controlliamo che non ci sia un altro username uguale nel database
         fetch("/register/username/" + encodeURIComponent(input.value)).then(fetchResponse).then(jsonControllaUsername);
     }
 }
@@ -43,7 +42,6 @@ function fetchResponse(response){
 }
 
 function jsonControllaUsername(json){
-    // Controllo il campo exists ritornato dal JSON
     if(formStatus.username = !json.exists){
         document.querySelector('.username').classList.remove('errore');
     } else { 
@@ -55,7 +53,6 @@ function jsonControllaUsername(json){
 }
 
 function jsonControllaEmail(json){
-    // Controllo il campo exists ritornato dal JSON
     if(formStatus.email = !json.exists){
         document.querySelector('.email').classList.remove('errore');
     } else { 

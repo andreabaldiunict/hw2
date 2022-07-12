@@ -66,10 +66,6 @@ img{
 	cursor: pointer;
 }
   
-input:-webkit-autofill{
-	transition: background-color 5000s ease-in-out 0s;
-}
-  
 .compulsory{
 	border: 1.5px solid rgb(221, 0, 0);
 }

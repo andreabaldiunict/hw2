@@ -18,19 +18,6 @@ Route::get('/', function () {
     return view('register');
 });
 
-Route::get('/preferiti', function () {
-    return view('preferiti');
-});
-
-Route::get('/home', function () {
-    return view('home');
-});
-
-Route::get('/consigliati', function () {
-    return view('Consigliati');
-});
-
-
 Route::get('/signup', "App\Http\Controllers\RegisterController@showSignup");
 Route::post('/register', "App\Http\Controllers\RegisterController@register");
 
@@ -41,6 +28,8 @@ Route::get('/login', "App\Http\Controllers\LoginController@login")->name("login"
 Route::get('/logout', "App\Http\Controllers\LoginController@logout")->name("logout");
 Route::post('/login', "App\Http\Controllers\LoginController@checkLogin");
 
+Route::get('/consigliati', "App\Http\Controllers\ConsigliatiController@index");
+Route::get('/home', "App\Http\Controllers\HomeController@index");
 Route::get('/quotable', "App\Http\Controllers\HomeController@quotable");
 
 Route::get('/store', "App\Http\Controllers\StoreController@index");
@@ -48,6 +37,7 @@ Route::get('/store/id/{id}', "App\Http\Controllers\StoreController@ispref");
 Route::post('/addPreferiti', "App\Http\Controllers\StoreController@addPref");
 Route::get('/store/{book}', "App\Http\Controllers\StoreController@Book");
 
+Route::get('/preferiti', "App\Http\Controllers\PrefController@index");
 Route::get('/preferito', "App\Http\Controllers\PrefController@pref");
 Route::post('/remove_preferito', "App\Http\Controllers\PrefController@remove_pref");
 

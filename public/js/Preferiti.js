@@ -2,7 +2,6 @@ function onPrefJson(json) {
     const prefs = document.querySelector('#book-list');
     const noprefs = document.querySelector('#banner');
     console.log(json);
-    let results = json.totalItems;
   
     if(json.length === 0) {
         console.log("Array is empty!") 
@@ -39,7 +38,6 @@ function onPrefJson(json) {
         id.textContent = result.id;
         
         const preferito = document.createElement('a');
-        //preferito.setAttribute('id', 'preferito');
         preferito.innerText= "Rimuovi dai preferiti";
         preferito.addEventListener('click',removePreferito);
   
@@ -54,7 +52,6 @@ function onPrefJson(json) {
     }
 
 }
-
 
 function removePrefJson(json){
     if(json.esito == true){
@@ -82,3 +79,27 @@ function removePreferito(event){
 }
 
 caricaPreferiti();
+
+
+//MENÙ MOBILE
+const menu = document.querySelector(".menu_mobile");
+const menuItems = document.querySelectorAll(".menuItem");
+const hamburger= document.querySelector(".hamburger");
+const closeIcon= document.querySelector(".closeIcon");
+const menuIcon = document.querySelector(".menuIcon");
+
+function toggleMenu() {
+  if (menu.classList.contains("showMenu")) {
+    console.log(menu.classList.contains("showMenu"));
+    menu.classList.remove("showMenu");
+    closeIcon.style.display = "none";
+    menuIcon.style.display = "block";
+  } else {
+    //console.log("aperto else");
+    menu.classList.add("showMenu");
+    closeIcon.style.display = "block";
+    menuIcon.style.display = "none";
+  }
+}
+
+hamburger.addEventListener("click", toggleMenu);

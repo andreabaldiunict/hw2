@@ -32,7 +32,6 @@ function SlideReset(){
     setTimeout(function(){
         bar[0].style.animation = "progression linear " + (slideDelay-.11) + "s";
 
-        //console.log(slideDelay-.11);
         slideTimer = window.setInterval(function(){
             ShowSlide(slideIndex+=1);
             }, slideDelay*1000);
@@ -46,11 +45,13 @@ for (i=0;i<cubes.length;i++) {
     })
 };
 
-prev.addEventListener("click", function(){
+const prevslide = document.querySelector('#prev');
+prevslide.addEventListener("click", function(){
     ShowSlide(slideIndex-=1);
 });
 
-next.addEventListener("click", function(){
+const nextslide = document.querySelector('#next');
+nextslide.addEventListener("click", function(){
     ShowSlide(slideIndex+=1);
 });
 
@@ -86,3 +87,26 @@ function Generate_quotable(event){
     //eseguo la fetch
     fetch("/quotable").then(onResponse_quotable).then(onJson_quotable);
 }
+
+//MENÙ MOBILE
+const menu = document.querySelector(".menu_mobile");
+const menuItems = document.querySelectorAll(".menuItem");
+const hamburger= document.querySelector(".hamburger");
+const closeIcon= document.querySelector(".closeIcon");
+const menuIcon = document.querySelector(".menuIcon");
+
+function toggleMenu() {
+  if (menu.classList.contains("showMenu")) {
+    console.log(menu.classList.contains("showMenu"));
+    menu.classList.remove("showMenu");
+    closeIcon.style.display = "none";
+    menuIcon.style.display = "block";
+  } else {
+    //console.log("aperto else");
+    menu.classList.add("showMenu");
+    closeIcon.style.display = "block";
+    menuIcon.style.display = "none";
+  }
+}
+
+hamburger.addEventListener("click", toggleMenu);

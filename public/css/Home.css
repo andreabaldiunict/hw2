@@ -165,7 +165,7 @@ section{
 }
   
 .cube:hover {
-	background:var(--shadow_slide);
+	background:var(--pantone_2);
 }
 
 .active_cube, .active_cube:hover {
@@ -193,8 +193,6 @@ section:nth-child(3) {
 	font-size: 70px;
 	padding-top: 50px;
 	color: var(--color__black);
-	-webkit-text-fill-color: var(--color_bar);
-	-webkit-animation: fill 0.5s infinite alternate;
 	overflow-x:hidden;
 }
   
@@ -444,6 +442,7 @@ section:nth-child(4) .box_left, section:nth-child(4) .box_right{
         margin: 2rem 1rem;
         font-size: 20px;
         text-decoration: none;
+		text-align: left;
     }
 
 	#menu_ext img{

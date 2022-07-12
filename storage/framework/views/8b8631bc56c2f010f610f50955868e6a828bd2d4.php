@@ -17,7 +17,6 @@
 </head>
 
 <body>
-    <!--MENÙ READBOOK-->
     <?php echo csrf_field(); ?>
         <!--MENÙ READBOOK-->
         <header>
@@ -92,10 +91,10 @@
     <footer>
         <div class="footer">
             <div class="row">
-                <a href="#https://it-it.facebook.com/groups/523172937735959/"><i class="fa fa-facebook"></i></a>
-                <a href="#https://www.instagram.com/ilpassaparoladeilibri/"><i class="fa fa-instagram"></i></a>
-                <a href="#https://www.youtube.com/channel/UCVIFYM2KzpTu_40p9lIZ_UQ"><i class="fa fa-youtube"></i></a>
-                <a href="#https://twitter.com/_un_libro_"><i class="fa fa-twitter"></i></a>
+                <a><i class="fa fa-facebook"></i></a>
+                <a><i class="fa fa-instagram"></i></a>
+                <a><i class="fa fa-youtube"></i></a>
+                <a><i class="fa fa-twitter"></i></a>
             </div>
 
             <div class="row">ReadBook Copyright © 2022 ReadBook - All rights reserved || Designed By: Andrea Baldi 

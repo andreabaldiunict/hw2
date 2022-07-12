@@ -23,14 +23,13 @@
             <div id="formLogin">
                 <form name="loginForm" method="POST" action="/login">
                 <?php echo csrf_field(); ?>
+
                     <div class="inputBox">
-                        <input type='text' placeholder = 'Username' name='username' class="textBox" autocomplete="on">
-                        <p id='segnalazione' class='erroreU hidden'>"Inserisci l'username"</p>
+                        <input type='text' placeholder = 'Username' name='username' class="textBox" autocomplete="on">   
                     </div>
 
                     <div class="inputBox">
-                        <input type='password' placeholder = 'Passowrd' name='password' class="textBox" autocomplete="on">
-                        <p id='segnpass' class='erroreP hidden'>Inserisci la password</p>
+                        <input type='password' placeholder = 'Password' name='password' class="textBox" autocomplete="on">
                     </div>
 
                     <div class="submit">
@@ -41,6 +40,10 @@
                         <p>Non sei Registrato? <a href='<?php echo e(url("signup")); ?>'>Registrati </a>
                         </p>
                     </div>
+                    <span class='hidden'>Inserisci tutti i campi</span>
+                    <?php if(isset($error)): ?>
+                         <p class='error'><?php echo e($error); ?></p>
+                    <?php endif; ?>
                 </form>
             </div>
         </div>
