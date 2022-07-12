@@ -10,6 +10,15 @@ use Illuminate\Routing\Controller as BaseController;
 
 class PrefController extends BaseController {
 
+    public function index() {
+        $session_id = session('user_id');
+        $user = User::find($session_id);
+        if (!isset($user))
+            return view('login');
+        
+        return view("preferiti");
+    }
+
     public function pref(){
      
         $session_id = session('user_id');
@@ -30,7 +39,7 @@ class PrefController extends BaseController {
         $session_id = session('user_id');
         $user = User::find($session_id);
 
-        $query = Preferiti::where('userid', $user->id)->where('id', $request['id'])->first();
+        $query = Preferiti::where('userid', $user->id)->where('id', $request['id']);
         $query->delete();
 
         if($query) {

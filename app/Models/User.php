@@ -21,7 +21,7 @@ class User extends Model {
     ];
 
     public function preferiti(){
-        return $this->belongsToMany('App\Models\Preferiti');
+        return $this->hasMany('App\Models\Preferiti');
     }
 
     public $timestamps = false;

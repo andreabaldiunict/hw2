@@ -42,7 +42,6 @@ class RegisterController extends BaseController {
         # INSERIMENTO USERNAME
         if(!preg_match('/^[a-zA-Z0-9_]{1,15}$/', $data['username'])) {
             $error[] = "Username non valido";
-            echo json_encode($error[]);
         } else {
             $username = User::where('username', $data['username'])->first();
             if ($username !== null) {

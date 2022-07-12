@@ -15,7 +15,7 @@ class LoginController extends BaseController {
             return redirect("home");
         }
         else {
-            return view('login')->with('csrf_token', csrf_token());
+            return view('login');
         }
     }
 
